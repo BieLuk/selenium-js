@@ -38,6 +38,8 @@ browsers = {
     chrome: {
         driverConfig: function(){
             var options = new chrome.Options();
+            options.addArguments("--headless");
+            options.addArguments("--disable-gpu");
             options.addArguments("--incognito");
             options.addArguments("--start-maximized");
             var driver = new webdriver.Builder().            
